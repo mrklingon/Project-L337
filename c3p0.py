@@ -40,16 +40,27 @@ c3po = [   "We're doomed!",
    "`Exciting' is hardly the word I would choose." ]
 
 def cwsay():
-    display.show(Image.HEART)
-    word = random.randrange(len(c3po))
-    speech.say(c3po[word])
-    display.scroll(c3po[word],75,wait=False,loop=True)
+    display.show(Image( '05550:'
+                       '50505:'
+                       '55555:'
+                       '02220:'
+                       '05550'))
+    word = random.choice(c3po)
+    for w in word.split():
+        speech.say(w)
+    for w in word.split():
+        display.scroll(w)
 
 
 def csay():
-    display.show(Image.HEART_SMALL)
-    word = random.randrange(len(c3po))
-    speech.say(c3po[word])
+    display.show(Image( '05550:'
+                       '50505:'
+                       '55555:'
+                       '02220:'
+                       '05550'))
+    word = random.choice(c3po)
+    for w in word.split():
+        speech.say(w)
     display.show(Image.HEART,clear=True)
 
 
